@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function bt1() {
+            return 13
+        }
+
+        function bt3() {
+            return 3
+        }
+        const firstPromise = new Promise((resolve, reject) => {
+            setTimeout(() => resolve(bt1()), 1000)
+        });
+
+        const secondPromise = new Promise((resolve, reject) => {
+            setTimeout(() => resolve(bt3()), 2000)
+        });
+
+        Promise.all([firstPromise, secondPromise]).then(res => {
+            console.log(res)
+        }).catch((error) => {
+            console.log(error)
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

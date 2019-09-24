@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function bubbleSort(array) {
+            for (let j = 0; j < array.length; j++) { // 比较几轮
+              
+        
+            
+                 let complete = true
+                for (let i = 0; i < array.length - 1 - j; i++) { //两辆比较减去1   再减去已经比较过的轮数
+                    if (array[i] > array[i + 1]) {
+                        [array[i], array[i + 1]] = [array[i + 1], array[i]]
+                        complete = false
+                        
+                    }
+                }
+                if (complete) {
+                    break
+                }
+                console.log(1)
+            }
+
+
+            return array
+        }
+     var result  = bubbleSort([9,11,10,8,6,2,3])
+     console.log(result)
+     </script>
+</body>
+
+</html>
